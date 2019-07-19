@@ -7,3 +7,6 @@
     name: container_manage_cgroup
     state: yes
     persistent: yes
+  when:
+  - ansible_selinux
+  - ansible_selinux.status == 'enabled'
